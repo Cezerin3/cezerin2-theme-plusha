@@ -45,11 +45,6 @@ const Price = ({ product, variant, isAllOptionsSelected, settings }) => {
 		oldPrice = product.regular_price;
 	}
 
-	if (Lscache.get('auth_data')) {
-		price = price*0.7;
-		oldPrice = product.regular_price;
-	}
-
 	if (oldPrice > 0) {
 		return (
 			<NewAndOldPrices

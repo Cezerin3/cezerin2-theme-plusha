@@ -11,9 +11,6 @@ const CartItem = ({ item, deleteCartItem, settings }) => {
 	);
 
 	let price=item.price_total;
-	if (Lscache.get('auth_data')) {
-		price = price*0.7;
-	}
 
 	return (
 		<div className="cart__item cart-item">

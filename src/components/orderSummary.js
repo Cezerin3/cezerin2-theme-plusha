@@ -27,9 +27,6 @@ const SummaryItem = ({ settings, item, updateCartItemQuantiry }) => {
 	}
 
 	let price=item.price_total;	
-	if (Lscache.get('auth_data')) {
-		price = price*0.7;		
-	}
 
 	return (
 		<div className="cart__item cart-item cart-item_checkout">
@@ -98,10 +95,6 @@ const OrderSummary = props => {
 
 		let subtotal=cart.grand_total;
 		let grand_total = cart.grand_total;
-		if (Lscache.get('auth_data')) {
-			subtotal = subtotal*0.7;
-			grand_total = grand_total-subtotal*0.3;
-		}
 
 		return (
 			<Fragment>

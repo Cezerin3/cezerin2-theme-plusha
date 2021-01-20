@@ -19,9 +19,6 @@ const CheckoutStepPayment = props => {
 	const { payment_method_gateway, grand_total } = cart;
 
 	let total = grand_total;
-	if(Lscache.get('auth_data')) {
-		total=total*0.7;
-	}
 
 	if (!show) {
 		return (
